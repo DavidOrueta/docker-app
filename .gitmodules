@@ -1,4 +1,4 @@
 [submodule "TSTWEB"]
 	path = TSTWEB
-	url = https://github.com/DavidOrueta/docker-app.git
+	url = https://github.com/DavidOrueta/TSTWEB.git
 	banch = docker
