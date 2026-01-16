@@ -1,0 +1,7 @@
+[submodule "apache/TSTWEB"]
+	path = apache/TSTWEB
+	url = https://github.com/DavidOrueta/docker-app.git
+	banch = docker
+[submodule "docker-app"]
+	path = docker-app
+	url = https://github.com/DavidOrueta/docker-app.git
