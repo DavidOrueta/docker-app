@@ -1,0 +1,27 @@
+services:
+  apache:
+    build:
+      dockerfile: apache.Dockerfile
+    container_name: tstweb-apache
+    depends_on:
+      - mysql
+    ports:
+      - "8080:80"
+    networks:
+      - tstweb_net
+  mysql:
+    build:
+      dockerfile: mysql.Dockerfile
+    container_name: tstweb-mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: pass
+      MYSQL_DATABASE: baseDatos
+    volumes:
+      - tstweb_db_data:/var/lib/mysql
+    networks:
+      - tstweb_net
+networks:
+  tstweb_net:
+
+volumes:
+  tstweb_db_data:    
